@@ -40,7 +40,7 @@ function import_zone() {
 
 function find_public_ip() {
     local public_ip
-    public_ip="$(dig +short myip.opendns.com @resolver1.opendns.com)"
+    public_ip="$(wget -qO- http://ipecho.net/plain)"
     if [[ "$?" != "0" ]]; then
         printf "%s\n" "Failed to get public ip."
         printf "%s\n" "$(public_ip)"
