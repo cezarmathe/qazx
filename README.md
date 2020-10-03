@@ -30,6 +30,9 @@ docker run \
     --volume $(pwd)/dns:/dns qazx:latest
 ```
 
+**Important!** You may need to run this script with `sudo`. It is completely safe to do so, since
+this script just calls docker.
+
 3. (Optional) **Installation**
 
 Run `./scripts/install.sh`.
