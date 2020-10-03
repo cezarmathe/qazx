@@ -41,9 +41,6 @@ function build_docker_image() {
 }
 
 function main() {
-    printf "%s\n" "Initializing Terraform.."
-    cd dns; terraform init; cd ..
-
     printf "%s\n\n" "Filling the main.auto.tfvars file. You will be asked a few questions."
     fill_main_tfvars
 
